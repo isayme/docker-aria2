@@ -28,6 +28,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Get Zerotier Version
         run: |
+          echo "AriaNgVersion ${{ github.event.inputs.AriaNgVersion }}"
           echo ARIANG_VERSION=${{ github.event.inputs.AriaNgVersion }} >> $GITHUB_ENV
           echo BUILD_TIME=`date -u +"%FT%TZ"` >> $GITHUB_ENV
       - name: Build and push
