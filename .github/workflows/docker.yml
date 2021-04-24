@@ -8,8 +8,8 @@ on:
         required: true
 
 env:
-  APP_NAME: zerotier
-  DOCKERHUB_REPO: isayme/zerotier
+  APP_NAME: aria2
+  DOCKERHUB_REPO: isayme/aria2
 
 jobs:
   main:
