@@ -42,7 +42,7 @@ jobs:
             linux/arm64/v8
           build-args: |
             APP_NAME=${{ env.APP_NAME }}
-            ARIANG_VERSION=${{ env.AriaNgVersion }}
+            ARIANG_VERSION=${{ env.ARIANG_VERSION }}
             BUILD_TIME=${{ env.BUILD_TIME }}
           tags: |
             ${{ env.DOCKERHUB_REPO }}:${{ env.ARIANG_VERSION }}
