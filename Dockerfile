@@ -5,7 +5,8 @@ WORKDIR /app
 RUN npm i -g gulp
 RUN apk update && apk add git
 
-ENV ARIANG_VERSION 1.1.4
+ARG ARIANG_VERSION
+ENV ARIANG_VERSION={ARIANG_VERSION}
 RUN git clone --depth 1 -b ${ARIANG_VERSION} https://github.com/mayswind/AriaNg.git
 RUN cd AriaNg && npm i && gulp clean build && rm -rf node_modules 
 
