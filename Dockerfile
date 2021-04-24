@@ -6,7 +6,7 @@ RUN npm i -g gulp
 RUN apk update && apk add git
 
 ARG ARIANG_VERSION
-ENV ARIANG_VERSION={ARIANG_VERSION}
+ENV ARIANG_VERSION=${ARIANG_VERSION}
 RUN echo "ARIANG_VERSION: ${ARIANG_VERSION}"
 
 RUN git clone --depth 1 -b ${ARIANG_VERSION} https://github.com/mayswind/AriaNg.git
