@@ -28,7 +28,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Get Zerotier Version
         run: |
-          echo ZEROTIER_VERSION=${{ github.event.inputs.zerotierVersion }} >> $GITHUB_ENV
+          echo ARIANG_VERSION=${{ github.event.inputs.AriaNgVersion }} >> $GITHUB_ENV
           echo BUILD_TIME=`date -u +"%FT%TZ"` >> $GITHUB_ENV
       - name: Build and push
         id: docker_build
@@ -46,7 +46,7 @@ jobs:
             ARIANG_VERSION=${{ env.AriaNgVersion }}
             BUILD_TIME=${{ env.BUILD_TIME }}
           tags: |
-            ${{ env.DOCKERHUB_REPO }}:${{ env.ZEROTIER_VERSION }}
+            ${{ env.DOCKERHUB_REPO }}:${{ env.ARIANG_VERSION }}
             ${{ env.DOCKERHUB_REPO }}:latest
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
