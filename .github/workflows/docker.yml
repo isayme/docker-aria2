@@ -6,6 +6,7 @@ on:
       AriaNgVersion:
         description: AriaNg version to be build
         required: true
+        default: 1.2.1
 
 env:
   APP_NAME: aria2
