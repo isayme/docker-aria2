@@ -1,4 +1,4 @@
-FROM node:10.23-alpine AS builder
+FROM node:16-alpine AS builder
 
 WORKDIR /app
 
@@ -13,7 +13,7 @@ RUN git clone --depth 1 -b ${ARIANG_VERSION} https://github.com/mayswind/AriaNg.
 RUN cd AriaNg && npm i && gulp clean build && rm -rf node_modules 
 
 
-FROM nginx:1.17.6-alpine
+FROM nginx:1-alpine
 
 WORKDIR /app
 
