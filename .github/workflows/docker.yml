@@ -27,7 +27,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Get Zerotier Version
+      - name: Get AriaNg Version
         run: |
           echo "AriaNgVersion ${{ github.event.inputs.AriaNgVersion }}"
           echo ARIANG_VERSION=${{ github.event.inputs.AriaNgVersion }} >> $GITHUB_ENV
