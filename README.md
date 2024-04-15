@@ -15,6 +15,7 @@ Docker image for Aria2 with Web UI AriaNG.
 ![screenshott](./screenshoot.png)
 
 # Docker Compose
+
 ```
 version: '3'
 
@@ -28,7 +29,7 @@ services:
       # web UI port
       - "6900:80"
     volumes:
-      # aria2 config file
+      # aria2 config file, see https://aria2.github.io/manual/en/html/aria2c.html
       - ./config/aria2/aria2.conf:/etc/aria2/aria2.conf
       # location of download files
       - /volume2/HD1/download/:/download
